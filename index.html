@@ -1,80 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        :root{
-            --my-nav-width: 20%;
-        }
-        *{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body{
-            display: flex;
-            flex-wrap: wrap;
-        }
-        header{
-            background-color: antiquewhite;
-            width:100%;
-            height:10vh;
-        }
-        nav{
-
-            width:var(--my-nav-width);
-            background-color: aqua;
-            height: 80vh;
-        }
-
-        main{
-            background-color: burlywood;
-            width: calc( 100% - var(--my-nav-width) )
-            height : 80%;
-        }
-
-        footer{
-            background-color: chartreuse;
-            width: 100%;
-            height: 10vh;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>福岡県の観光名所紹介</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        
 
+  <header class="hero">
+    <div class="container">
+      <h1 class="main-title">福岡県の観光名所紹介</h1>
+      <p class="subtitle">福岡を巡る、魅力あふれる観光名所</p>
+      <div class="description">
+        <p>福岡県には、歴史を感じられる神社や寺院、</p>
+        <p>海や自然を楽しめる場所など、</p>
+        <p>さまざまな観光名所があります。</p>
+        <p>ここでは、福岡を代表する8つの観光名所を</p>
+        <p>写真とともに紹介します。</p>
+        <p>気になる場所を見つけて、</p>
+        <p>福岡観光の参考にしてみてください。</p>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <section class="spot-list">
 
-
-
-
-
-        <div>福岡県の観光名所紹介</div>
-
-        <div>キャッチフレーズ</div>
-
-        <div>
-             <div>Webクリエイター</div>
-             <div>2年</div>
-             <div>島村 友士</div>
+      <!-- 1. 福岡タワー -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/fukuoka-tower.jpg" alt="福岡タワー">
         </div>
-        
+        <div class="spot-info">
+          <h2>福岡タワー</h2>
+          <a href="./fukuoka tower.html" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
 
+      <!-- 2. 海の中道海浜公園 -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/uminonakamichi.jpg" alt="海の中道海浜公園">
+        </div>
+        <div class="spot-info">
+          <h2>海の中道海浜公園</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
 
-        
-    </header>
-    <nav>
-    </nav>
-    <main>
-    </main>
-    <footer>
-    </footer>
+      <!-- 3. 櫛田神社 -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/kushida-shrine.jpg" alt="櫛田神社">
+        </div>
+        <div class="spot-info">
+          <h2>櫛田神社</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
+
+      <!-- 4. 桜井二見ヶ浦 -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/futamigaura.jpg" alt="桜井二見ヶ浦">
+        </div>
+        <div class="spot-info">
+          <h2>桜井二見ヶ浦</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
+
+      <!-- 5. 太宰府天満宮 -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/dazaifu.jpg" alt="太宰府天満宮">
+        </div>
+        <div class="spot-info">
+          <h2>太宰府天満宮</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
+
+      <!-- 6. 門司港レトロ -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/mojiko.jpg" alt="門司港レトロ">
+        </div>
+        <div class="spot-info">
+          <h2>門司港レトロ</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
+
+      <!-- 7. 柳川川下り -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/yanagawa.jpg" alt="柳川川下り">
+        </div>
+        <div class="spot-info">
+          <h2>柳川川下り</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
+
+      <!-- 8. 秋月城跡 -->
+      <article class="spot-card">
+        <div class="spot-image">
+          <img src="images/akizuki.jpg" alt="秋月城跡">
+        </div>
+        <div class="spot-info">
+          <h2>秋月城跡</h2>
+          <a href="#" class="btn-detail">詳しく見る</a>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 福岡県の観光名所紹介</p>
+  </footer>
+
 </body>
 </html>
