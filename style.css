@@ -20,30 +20,42 @@ body {
   padding: 0 20px;
 }
 
-/* ヘッダー・導入部分 */
+/* ヘッダー・導入部分（背景画像対応） */
 .hero {
   text-align: center;
-  padding: 40px 0 30px;
+  padding: 80px 20px; /* 画像が見えるよう上下の余白を大きく設定 */
+  
+  /* 画像と暗めの透過オーバーレイを重ねて文字の可読性を確保 */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("images/fukuoka.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  color: #ffffff; /* 文字色を白に変更 */
+  margin-bottom: 40px;
 }
 
 .main-title {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
-  color: #222;
+  margin-bottom: 12px;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* 文字影で読みやすく */
 }
 
 .subtitle {
   font-size: 1.3rem;
   font-weight: bold;
-  margin-bottom: 20px;
-  color: #444;
+  margin-bottom: 24px;
+  color: #f0f0f0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .description {
   font-size: 1rem;
   line-height: 1.8;
-  color: #555;
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* 観光名所リスト（カードデザイン） */
@@ -123,6 +135,10 @@ footer {
 
 /* レスポンシブ対応（スマホ向け） */
 @media (max-width: 768px) {
+  .hero {
+    padding: 50px 15px; /* スマホ画面では上下パディングを少し小さく */
+  }
+
   .spot-card {
     flex-direction: column;
     padding: 20px;
@@ -148,5 +164,62 @@ footer {
 
   .subtitle {
     font-size: 1.1rem;
+  }
+}
+
+/* スムーズスクロールの設定（目次リンクをクリックした時に滑らかに移動） */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 目次セクション */
+.toc-container {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 25px 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.toc-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.toc-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2列でスッキリ並べる */
+  gap: 12px 20px;
+  padding: 0;
+}
+
+.toc-list li a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.toc-list li a:hover {
+  background-color: #f0f0f0;
+  color: #0056b3;
+}
+
+/* スマホ対応：目次を1列表示に切り替え */
+@media (max-width: 768px) {
+  .toc-list {
+    grid-template-columns: 1fr;
   }
 }
