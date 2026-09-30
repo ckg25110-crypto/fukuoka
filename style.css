@@ -33,6 +33,20 @@ body {
   
   color: #ffffff; /* 文字色を白に変更 */
   margin-bottom: 40px;
+  /* ヘッダーの説明文（.description）の調整 */
+.description {
+  font-size: 1.15rem; /* 文字サイズ（元の1remから大きめに設定） */
+  font-weight: 500;   /* 少し太めにして視認性をアップ */
+  line-height: 2.0;   /* 行間を広げて読みやすく */
+  color: #ffffff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  margin-top: 15px;   /* サブタイトルとの間の余白 */
+}
+
+/* pタグごとの下余白を調整する場合 */
+.description p {
+  margin-bottom: 6px;
+}
 }
 
 .main-title {
