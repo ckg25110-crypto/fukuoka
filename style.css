@@ -83,7 +83,7 @@ body {
 .spot-card {
   display: flex;
   align-items: center;
-  background-color: #888888; /* デザイン案のグレー背景 */
+  background-color: #A65D45; 
   border-radius: 12px;
   padding: 25px 30px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
